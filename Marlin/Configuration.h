@@ -49,7 +49,7 @@
  *
  * Note: Update also Version.h !
  */
-#define CONFIGURATION_H_VERSION 010117
+#define CONFIGURATION_H_VERSION 0101173
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -387,7 +387,6 @@
 // It also enables the M302 command to set the minimum extrusion temperature
 // or to allow moving the extruder regardless of the hotend temperature.
 // *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
-#define PREVENT_DANGEROUS_EXTRUDE
 #define PREVENT_COLD_EXTRUSION
 #define EXTRUDE_MINTEMP 160
 
@@ -618,11 +617,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#ifndef FAST_SCREWS
-  #define HOMING_FEEDRATE {50*60, 50*60, 3.5*60, 0}  // set the homing speeds (mm/min)
-#else
-  #define HOMING_FEEDRATE {50*60, 50*60, 30*60, 0}  // set the homing speeds (mm/min)
-#endif
+
 
 // default settings
 
