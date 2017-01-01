@@ -49,7 +49,7 @@
  *
  * Note: Update also Version.h !
  */
-#define CONFIGURATION_H_VERSION 0101173
+#define CONFIGURATION_H_VERSION 0101174
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -532,8 +532,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
   #define INVERT_E1_DIR true    // for direct drive extruder v9 set to true, for geared extruder set to false
   #define INVERT_E2_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
 #else
-  #define INVERT_X_DIR true    // for Mendel set to false, for Orca set to true
-  #define INVERT_Y_DIR true    // for Mendel set to true, for Orca set to false
+  #define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true
+  #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
   #define INVERT_Z_DIR false     // for Mendel set to false, for Orca set to true
   #define INVERT_E0_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
   #define INVERT_E1_DIR false    // for direct drive extruder v9 set to true, for geared extruder set to false
@@ -542,7 +542,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // ENDSTOP SETTINGS:
 // Sets direction of endstops when homing; 1=MAX, -1=MIN
-#define X_HOME_DIR -1
+#define X_HOME_DIR 1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 
@@ -605,7 +605,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define Z_MAX_LENGTH (Z_MAX_POS - Z_MIN_POS)
 
 // The position of the homing switches
-//#define MANUAL_HOME_POSITIONS  // If defined, MANUAL_*_HOME_POS below will be used
+#define MANUAL_HOME_POSITIONS  // If defined, MANUAL_*_HOME_POS below will be used
 //#define BED_CENTER_AT_0_0  // If defined, the center of the bed is at (X=0, Y=0)
 
 //Manual homing switch locations:
